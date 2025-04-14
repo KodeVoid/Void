@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/assets/favicon/site.webmanifest">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Void</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="relative w-full h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('/src/assets/gif2.gif');">
+    <!-- Muted overlay using Tailwind utilities -->
+    <div class="absolute inset-0 bg-black/50 blur-sm pointer-events-none"></div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
