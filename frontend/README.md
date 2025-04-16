@@ -15,3 +15,6 @@ Void is a minimalist, immersive personal digital operating system that combines 
 ## **Message Scheduling Utility**
 Void includes a message scheduling tool, allowing users to schedule messages for specific events, days, or occasions.
 
+## Whatsap messaging utility
+
+

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { commandList } from "../commands";
 
 // This is your enhanced Terminal component that exposes an interface for other components
-function Terminal() {
+function TerminalWithInterface() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([]);
   const [history, setHistory] = useState([]);
@@ -167,4 +167,4 @@ function Terminal() {
   };
 }
 
-export default Terminal;
+export default TerminalWithInterface;
