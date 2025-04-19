@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Terminal from "./components/terminal";
 import WhatsAppGUI from "./components/WhatsAppGUI";
+import ResumeForm from "./components/ResumeForm";
 
 function App() {
   const [activeTab, setActiveTab] = useState("terminal");
@@ -13,38 +14,42 @@ function App() {
           WELCOME TO THE VOID
         </h1>
       </div>
-      
+
       {/* Tab Navigation */}
       <div className="flex mb-4 space-x-2">
-        <button
-          className={`px-4 py-2 rounded-t-lg ${activeTab === 'terminal' ? 'bg-black/30 text-green-400' : 'bg-black/10 text-green-600'}`}
-          onClick={() => setActiveTab('terminal')}
-        >
-          Terminal
-        </button>
-        <button
-          className={`px-4 py-2 rounded-t-lg ${activeTab === 'whatsapp' ? 'bg-black/30 text-green-400' : 'bg-black/10 text-green-600'}`}
-          onClick={() => setActiveTab('whatsapp')}
-        >
-          WhatsApp
-        </button>
+        {["terminal", "whatsapp", "resume"].map((tab) => (
+          <button
+            key={tab}
+            className={`px-4 py-2 rounded-t-lg capitalize ${
+              activeTab === tab
+                ? "bg-black/30 text-green-400"
+                : "bg-black/10 text-green-600"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
       </div>
-      
+
       {/* Main Content Area */}
-      <div className="w-full max-w-3xl">
-        {activeTab === 'terminal' ? (
+      <div className="w-full max-w-3xl bg-black/20 border border-white/10 rounded-lg p-4 shadow-inner shadow-green-400/10">
+        {activeTab === "terminal" ? (
           terminalComponent
-        ) : (
+        ) : activeTab === "whatsapp" ? (
           <WhatsAppGUI sendTerminalCommand={executeCommand} />
+        ) : (
+          <ResumeForm />
         )}
       </div>
-      
-      {/* Always visible small terminal */}
-      {activeTab === 'whatsapp' && (
+
+      {/* Mini Terminal Output */}
+      {activeTab === "whatsapp" && (
         <div className="w-full max-w-3xl mt-6 h-24 overflow-y-auto bg-black/40 border border-white/10 rounded-lg p-2 text-sm">
           <div className="font-bold text-green-500 mb-1">Terminal Output:</div>
-          {/* You could show the last few lines of terminal output here */}
-          <div className="text-green-400 opacity-70">(Terminal commands will be executed here)</div>
+          <div className="text-green-400 opacity-70">
+            (Terminal commands will be executed here)
+          </div>
         </div>
       )}
     </div>
