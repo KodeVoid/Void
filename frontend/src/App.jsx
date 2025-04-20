@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Terminal from "./components/terminal";
 import WhatsAppGUI from "./components/WhatsAppGUI";
 import ResumeForm from "./components/ResumeForm";
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   const [activeTab, setActiveTab] = useState("terminal");
   const { terminalComponent, executeCommand } = Terminal();
@@ -52,6 +52,7 @@ function App() {
           </div>
         </div>
       )}
+      <Analytics/>
     </div>
   );
 }
