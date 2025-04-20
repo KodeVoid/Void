@@ -126,8 +126,27 @@ function ResumeForm({ onSubmit }) {
 
   const submit = (e) => {
     e.preventDefault();
-    onSubmit(form);
+    // Convert the form data to JSON
+    const formData = JSON.stringify(form, null, 2);
+  
+    // Create a Blob from the JSON string
+    const blob = new Blob([formData], { type: "application/json" });
+  
+    // Create a link element
+    const link = document.createElement("a");
+  
+    // Set the download attribute with the file name
+    link.download = "resume.json";
+  
+    // Create a URL for the Blob
+    link.href = URL.createObjectURL(blob);
+  
+    // Append the link to the body, click it to trigger the download, and remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
+  
 
   return (
     <form onSubmit={submit} className="space-y-4 p-4 max-w-3xl mx-auto">
@@ -390,6 +409,7 @@ function ResumeForm({ onSubmit }) {
         <button 
           type="submit" 
           className="bg-green-500 text-white px-6 py-3 rounded font-bold"
+          
         >
           Generate Resume
         </button>

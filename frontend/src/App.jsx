@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black/10 text-green-400 font-mono px-4 py-8">
       <div className="mb-6 text-center">
-        <h1 className="text-[40px] md:text-[50px] font-bold text-green-400 backdrop-blur-sm bg-black/30 border border-white/10 px-6 py-2 rounded-2xl shadow-md shadow-green-500/20">
+        <h1 className="text-[40px] md:text-[50px] font-bold text-green-400 backdrop-blur-sm bg-black border border-white/10 px-6 py-2 rounded-2xl shadow-md shadow-green-500/20">
           WELCOME TO THE VOID
         </h1>
       </div>
@@ -22,8 +22,8 @@ function App() {
             key={tab}
             className={`px-4 py-2 rounded-t-lg capitalize ${
               activeTab === tab
-                ? "bg-black/30 text-green-400"
-                : "bg-black/10 text-green-600"
+                ? "bg-black text-green-400"
+                : "bg-black/50 text-white font-extrabold"
             }`}
             onClick={() => setActiveTab(tab)}
           >

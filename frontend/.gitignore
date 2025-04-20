@@ -21,7 +21,7 @@ node_modules/
 .assets/
 
 # Ignore specific folders
-src/assets/
+# src/assets/
 
 # Editor directories and files
 .vscode/
