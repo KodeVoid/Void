@@ -36,7 +36,7 @@ function WhatsAppGUI({ sendTerminalCommand }) {
   };
 
   return (
-    <div className="bg-black/30 border border-white/20 rounded-xl backdrop-blur-md p-4 text-green-400 w-full max-w-md">
+    <div className="bg-black/30 border items-center justify-center border-white/20 rounded-xl backdrop-blur-md p-4 text-green-400 w-full max-w-md">
       <h2 className="text-xl mb-4 font-bold text-center">WhatsApp Messenger</h2>
       
       <div className="mb-4">
