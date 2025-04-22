@@ -6,10 +6,10 @@ const Home = () => {
     <>
       <Navbar />
       <div className="w-full text-white font-mono min-h-screen flex flex-col justify-center items-center bg-black/30 backdrop-blur-sm px-4">
+
+     
         <div className="text-center p-6 md:p-10 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-pulse bg-black/50 backdrop-blur-lg p-4 rounded">
-            WEB DEVELOPMENT FROM THE VOID
-          </h1>
+          <h1 className="font-mono text-5xl text-white my-3 ">Web Development From The Void</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto bg-black/40 backdrop-blur-sm p-4 rounded">
             Welcome to my journey of web development, where technology meets creativity. Join me as I build innovative and scalable solutions.
           </p>
