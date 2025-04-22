@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Navbar from "./Navbar";
 
 const WorksDisplay = () => {
   const [projects, setProjects] = useState([]);
@@ -28,6 +29,8 @@ const WorksDisplay = () => {
   const closeModal = () => setSelectedProject(null);
 
   return (
+    <>
+    <Navbar/>
     <div className="w-full py-12 px-4 md:px-8 bg-black/30 backdrop-blur-sm">
       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white text-center">My Works</h2>
 
@@ -165,6 +168,8 @@ const WorksDisplay = () => {
         </div>
       )}
     </div>
+    </>
+   
   );
 };
 
