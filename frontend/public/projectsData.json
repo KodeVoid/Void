@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "title": "ASR Academic Scoring System",
+      "description": "Final Year Project focused on automating academic staff scoring based on publication records, leveraging speech-to-text and large language models.",
+      "image": "/images/asr-scoring.jpg",
+      "category": "Full Stack",
+      "technologies": ["Python", "Django", "Deepgram API", "Google Gemini", "SQLite"],
+      "codeUrl": "https://github.com/Kendricktech/asr-academic-scoring-system",
+      "media": [
+        "/ASR_Academic_Scoring_System/media/demo1.png",
+        "/ASR_Academic_Scoring_System/media/report.pdf"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Online Library Management System",
+      "description": "A Django-based system to handle library operations including book lending, return, fines, and online payments via Paystack.",
+      "image": "/images/library-system.jpg",
+      "category": "Full Stack",
+      "technologies": ["Django", "HTML", "CSS", "JavaScript", "Paystack"],
+      "codeUrl": "https://github.com/Kendricktech/library-management-system",
+      "media": [
+        "/Library_Management_System/media/interface.png",
+        "/Library_Management_System/media/use_case_diagram.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Void",
+      "description": "A personal project to create a simple and elegant personal website using React and Tailwind CSS.",
+      "image": "/images/void/void.jpg",
+      "category": "Front End",
+      "technologies": ["React", "Tailwind CSS"],
+      "codeUrl": "https://github.com/Kendricktech/void",
+      "media": [
+        "/Void/media/mobile-view.png",
+        "/Void/media/component-structure.pdf"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Leave Management System",
+      "description": "A system for managing employee leave requests, approvals, and record-keeping. Built with Django and SQLite.",
+      "image": "/images/leave-management.jpg",
+      "category": "Full Stack",
+      "technologies": ["Django", "SQLite", "Tailwind CSS", "HTML", "CSS"],
+      "codeUrl": "https://github.com/Kendricktech/leave-management-system",
+      "media": [
+        "/Leave_Management_System/media/dashboard.png",
+        "/Leave_Management_System/media/erd.png"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "House Rent Management System",
+      "description": "A web application for managing house rentals, tenant records, rent collection, and receipts.",
+      "image": "/images/house-rent.jpg",
+      "category": "Full Stack",
+      "technologies": ["Django", "HTML", "CSS", "JavaScript", "SQLite"],
+      "codeUrl": "https://github.com/Kendricktech/house-rent-management-system",
+      "media": [
+        "/House_Rent_Management_System/media/tenant_form.jpg",
+        "/House_Rent_Management_System/media/receipt_sample.pdf"
+      ]
+    }
+  ]
+  
