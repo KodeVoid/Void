@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./assets/Home";
+import Home from "./components/Home";
 import Portfolio from "./pages/Portfolio";
 import WorksDisplay from "./components/Display";
 import { Analytics } from "@vercel/analytics/react";
