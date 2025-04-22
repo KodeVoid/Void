@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import Terminal from "./components/terminal";
-import WhatsAppGUI from "./components/WhatsAppGUI";
-import ResumeForm from "./components/ResumeForm";
+import Terminal from "../components/terminal";
+import WhatsAppGUI from "../components/WhatsAppGUI";
+import ResumeForm from "../components/ResumeForm";
+import Navbar from "../components/Navbar";
 import { Analytics } from "@vercel/analytics/react"
 function Utilities() {
   const [activeTab, setActiveTab] = useState("terminal");
   const { terminalComponent, executeCommand } = Terminal();
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black/10 text-green-400 font-mono px-4 py-8">
+   <>
+   <Navbar/>
+
+   <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black/10 text-green-400 font-mono px-4 py-8">
       <div className="mb-6 text-center">
         <h1 className="text-[40px] md:text-[50px] font-bold text-green-400 backdrop-blur-sm bg-black border border-white/10 px-6 py-2 rounded-2xl shadow-md shadow-green-500/20">
           WELCOME TO THE VOID
@@ -54,6 +58,7 @@ function Utilities() {
       )}
       <Analytics/>
     </div>
+   </>
   );
 }
 

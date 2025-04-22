@@ -8,5 +8,8 @@ export default defineConfig({
   hmr: {
     overlay: false,
   },
-}
+},
+build: {
+  outDir: 'dist',
+},
 })
