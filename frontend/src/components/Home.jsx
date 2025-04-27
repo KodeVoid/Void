@@ -37,7 +37,7 @@ const Home = () => {
               icon: <Linkedin size={28} />,
             },
             {
-              href: "https://t.me/Olorikendeick",
+              href: "https://t.me/Olorikendrick",
               label: "Telegram",
               icon: <Send size={28} />,
             },
@@ -73,7 +73,8 @@ const Home = () => {
 
         {/* Footer */}
         <div className="mt-6 text-sm text-gray-400">
-          <p>© 2023 Kendrick Olori. All rights reserved.</p>
+          <p>© {new Date().getFullYear()
+          } Kendrick Olori. All rights reserved.</p>
         </div>
       </div>
     </>
