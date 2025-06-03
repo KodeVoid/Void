@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Specificity, Inheritance, and the Cascade</title>
+  <style>
+    .note {
+      background-color: gainsboro;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border: 3px dotted blue;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    .table {
+      background-color: red;
+      border: 2px solid black;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > td {
+      padding: 0.5rem;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: monospace;
+    }
+    #table{
+        background-color: azure;
+    }
+    body>section>h1{
+        text-align: center;
+        color: #141212;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="note"> 
+    <h1 class="note" >Specificity</h1>
+    <h2>
+      Specificity is an algorithm that defines how conflict is resolved when multiple rules target the same element.
+    </h2>
+    <p>
+      Specificity is defined by columns from left to right as illustrated by the table below.
+    </p>
+    <p>
+      The example after the table demonstrates this visually.
+    </p>  
+  </section>
+
+  <div>
+    <table id="table" class="table">
+      <thead>
+        <tr>
+          <th>A (Inline)</th>
+          <th>B (ID)</th>
+          <th>C (Class, Attr, Pseudo-class)</th>
+          <th>D (Element, Pseudo-element)</th>
+          <th>Selector</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>0</td><td>0</td><td>0</td><td><code>&lt;div style="..."&gt;</code> (inline)</td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>1</td><td>0</td><td><code>.note</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>1</td><td>0</td><td>0</td><td><code>#table</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>1</td><td>0</td><td><code>.table</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>1</td><td>3</td><td><code>.table &gt; thead &gt; tr &gt; th:not(:last-child)</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>0</td><td>1</td><td><code>table</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>0</td><td>1</td><td><code>pre</code></td>
+        </tr>
+        <tr>
+          <td>0</td><td>0</td><td>0</td><td>1</td><td><code>code</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="note">
+    <p>
+      Specificity is represented by a four-column system with decreasing importance from left to right.
+      Think of it like the place value system — numbers on the left carry more weight than those on the right.
+    </p>
+
+    <p>
+      The <strong>"A"</strong> column represents inline styles, such as:
+    </p>
+
+    <pre><code>&lt;div style="background-color: red;"&gt;&lt;/div&gt;</code></pre>
+
+    <p>
+      Inline styles have the highest specificity and override all other rule types, as shown in the table above.
+    </p>
+
+    <p>
+        Next up is the <strong>"B (ID)"</strong> column for ID selectors. These are the second most powerful and override any other styles except inline styles.
+    </p>
+    <p>For example, our table element:</p>
+    <pre><code>&lt;table class='table' id='table'&gt;</code></pre>
+    <p>shows up with an azure background because the ID selector <code>#table</code> (specificity 0,1,0,0) overrides the red background from the class selector <code>.table</code> (specificity 0,0,1,0).</p>
+
+    <p>
+        The <strong>"C"</strong> column covers classes, attributes, and pseudo-classes. These include:
+    </p>
+    <ul>
+        <li><strong>Classes:</strong> <code>.note</code>, <code>.table</code></li>
+        <li><strong>Attribute selectors:</strong> <code>[type="text"]</code>, <code>[href^="https"]</code></li>
+        <li><strong>Pseudo-classes:</strong> <code>:hover</code>, <code>:first-child</code>, <code>:not()</code></li>
+    </ul>
+    <p>
+        Notice in our table how <code>.table > thead > tr > th:not(:last-child)</code> has a specificity of 0,0,1,3 — that's 1 pseudo-class (<code>:not()</code>) and 3 elements.
+    </p>
+
+    <p>
+        Finally, the <strong>"D"</strong> column represents element selectors and pseudo-elements:
+    </p>
+    <ul>
+        <li><strong>Element selectors:</strong> <code>table</code>, <code>div</code>, <code>h1</code></li>
+        <li><strong>Pseudo-elements:</strong> <code>::before</code>, <code>::after</code>, <code>::first-line</code></li>
+    </ul>
+    <p>
+        These have the lowest specificity. For example, <code>body>section>h1</code> in our CSS has a specificity of 0,0,0,3 (three element selectors), which styles our main heading.
+    </p>
+
+    <p>
+        <strong>Remember:</strong> Specificity is calculated by counting each type of selector, not just their presence. A selector like <code>.class1.class2.class3</code> would have a specificity of 0,0,3,0!
+    </p>
+    
+    <p>I hope this effectively demonstrates the nature of specificity in selectors. You will find this very important when styling your HTML documents.</p>
+    
+    <p>For further reading, check out the MDN docs at <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Specificity" target="_blank">CSS Specificity Documentation</a></p>
+    
+    <hr style="margin: 2rem 0; border: 1px solid #ccc;">
+    
+    <div style="text-align: center; margin-top: 2rem;">
+        <h3>Hey If you found this helpful Connect with Me</h3>
+        <p>
+            <a href="https://www.linkedin.com/in/kodevoid/" target="_blank" style="margin: 0 1rem; text-decoration: none; color: #0077b5;">LinkedIn</a> | 
+            <a href="https://x.com/olorikendrick" target="_blank" style="margin: 0 1rem; text-decoration: none; color: #1da1f2;">X (Twitter)</a>
+        </p>
+        <p style="font-size: 0.9em; color: #666;">
+           
+        </p>
+    </div>
+  </section>
+
+</body>
+</html>
