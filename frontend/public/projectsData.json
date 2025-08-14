@@ -6,16 +6,14 @@
     "image": "/images/asr.png",
     "category": "Full Stack",
     "technologies": ["Python", "Django", "Deepgram API", "Google Gemini", "SQLite"],
-    "codeUrl": "https://github.com/Kendricktech/asr-academic-scoring-system",
+    "codeUrl": "https://github.com/KodeVoid/asr-academic-scoring-system",
     "media": [
       "/ASR_Academic_Scoring_System/media/img-1.png",
       "/ASR_Academic_Scoring_System/media/img-2.png",
       "/ASR_Academic_Scoring_System/media/img-3.png",
-     
       "/ASR_Academic_Scoring_System/media/img-5.png",
       "/ASR_Academic_Scoring_System/media/img-6.png",
       "/ASR_Academic_Scoring_System/media/img-7.png"
-    
     ]
   },
   {
@@ -25,7 +23,7 @@
     "image": "/images/library.jpg",
     "category": "Full Stack",
     "technologies": ["Django", "HTML", "CSS", "JavaScript", "Paystack"],
-    "codeUrl": "https://github.com/Kendricktech/library-management-system",
+    "codeUrl": "https://github.com/KodeVoid/library-management-system",
     "media": [
       "/Library_Management_System/media/img-1.jpg",
       "/Library_Management_System/media/img-2.jpg",
@@ -41,10 +39,11 @@
     "image": "/images/void.png",
     "category": "Front End",
     "technologies": ["React", "Tailwind CSS"],
-    "codeUrl": "https://github.com/Kendricktech/void",
+    "codeUrl": "https://github.com/KodeVoid/void",
     "media": [
       "/Void/media/img-1.png",
-      "/Void/media/img-2.png"    ]
+      "/Void/media/img-2.png"
+    ]
   },
   {
     "id": 4,
@@ -53,7 +52,7 @@
     "image": "/images/lms.jpg",
     "category": "Full Stack",
     "technologies": ["Django", "SQLite", "Tailwind CSS", "HTML", "CSS"],
-    "codeUrl": "https://github.com/Kendricktech/leave-management-system",
+    "codeUrl": "https://github.com/KodeVoid/leave-management-system",
     "media": [
       "/Leave_Management_System/media/img-1.jpg",
       "/Leave_Management_System/media/img-2.jpg",
@@ -67,12 +66,22 @@
     "image": "/images/happy_home.png",
     "category": "Full Stack",
     "technologies": ["Django", "HTML", "CSS", "JavaScript", "SQLite"],
-    "codeUrl": "https://github.com/Kendricktech/House-Rental-Platform",
+    "codeUrl": "https://github.com/KodeVoid/House-Rental-Platform",
     "media": [
       "/House_Rent_Management_System/media/img-1.png",
       "/House_Rent_Management_System/media/img-2.png",
       "/House_Rent_Management_System/media/img-3.png",
       "/House_Rent_Management_System/media/img-4.png"
     ]
+  },
+  {
+    "id": 6,
+    "title": "Rust Microservices - Network Communication",
+    "description": "A comprehensive Rust networking project implementing TCP and HTTP communication protocols with custom routing, handlers, and response management systems.",
+    "image": "/images/rust-networking.png",
+    "category": "Backend",
+    "technologies": ["Rust", "TCP", "HTTP", "Networking", "Microservices"],
+    "codeUrl": "https://github.com/KodeVoid/microservies-in-rust-scenario1",
+    "media": []
   }
 ]
