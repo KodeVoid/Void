@@ -9,16 +9,22 @@ const Home = () => {
 
      
         <div className="text-center p-6 md:p-10 max-w-4xl">
-          <h1 className="font-mono text-5xl text-white my-3 ">Web Development From The Void</h1>
+          <h1 className="font-mono text-5xl text-white my-3 ">Crafting Scalable  Solutions</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto bg-black/40 backdrop-blur-sm p-4 rounded">
-            Welcome to my journey of web development, where technology meets creativity. Join me as I build innovative and scalable solutions.
+            I'm Kendrick Olori, a Fullstack Developer with over 4 years of experience in building scalable web applications using Python, Rust, and React. With a B.Sc in Computer Science from the University of Nigeria, Nsukka, I specialize in system automation and performance optimization, delivering innovative solutions for education and business sectors.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex justify-center gap-4 flex-wrap">
             <a
               href="/portfolio"
               className="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white rounded transition-all duration-300 font-bold border border-white/30"
             >
               Explore My Work
+            </a>
+            <a
+              href="/about"
+              className="inline-block px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white rounded transition-all duration-300 font-bold border border-white/30"
+            >
+              About Me
             </a>
           </div>
         </div>
@@ -73,8 +79,7 @@ const Home = () => {
 
         {/* Footer */}
         <div className="mt-6 text-sm text-gray-400">
-          <p>© {new Date().getFullYear()
-          } Kendrick Olori. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Kendrick Olori. All rights reserved.</p>
         </div>
       </div>
     </>
