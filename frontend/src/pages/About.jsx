@@ -13,19 +13,82 @@ const About = () => {
             ABOUT KENDRICK OLORI
           </h1>
           <p className="text-lg md:text-xl bg-black/40 p-4 rounded backdrop-blur-md">
-          I'm Kendrick Olori — a fullstack web developer with deep experience in Django and Tailwind, now sharpening my edge with React, React Native, and C++. I focus on building clean, scalable systems that work in the real world, not just on paper. My goal? Launch a dev agency that puts results and reliability first. I don’t chase trends — I combine what’s proven with what’s next, and I build like it matters.          </p>
+            I'm Kendrick Olori, a Fullstack Developer with over 4 years of experience in software development, holding a B.Sc in Computer Science from the University of Nigeria, Nsukka. I specialize in building scalable web applications using Python, Rust, and React, with a strong background in network infrastructure and academic system automation. Passionate about open-source contributions and performance optimization, I aim to deliver reliable, high-quality solutions.
+          </p>
+        </div>
+
+        {/* Professional Experience */}
+        <div className="mt-10 max-w-4xl text-left">
+          <h2 className="text-2xl font-bold mb-4 text-center">Professional Experience</h2>
+          <div className="space-y-6">
+            <div className="bg-white/10 p-6 rounded-lg border border-white/20">
+              <h3 className="text-xl font-semibold">Network Engineer - UNN ICT and Innovation Center, Nsukka</h3>
+              <p className="text-sm text-gray-300">2024</p>
+              <ul className="list-disc ml-6 mt-2 text-sm">
+                <li>Provided IT support and maintenance for enterprise network equipment.</li>
+                <li>Extended campus-wide LAN infrastructure in collaboration with cross-functional teams.</li>
+                <li>Configured systems for Computer-Based Test (CBT) examinations.</li>
+                <li>Maintained 99%+ network uptime through proactive monitoring.</li>
+              </ul>
+            </div>
+            <div className="bg-white/10 p-6 rounded-lg border border-white/20">
+              <h3 className="text-xl font-semibold">Software Developer (Freelance)</h3>
+              <p className="text-sm text-gray-300">2024 - Present</p>
+              <ul className="list-disc ml-6 mt-2 text-sm">
+                <li>Developed a full-stack library management system using Django.</li>
+                <li>Automated academic staff scoring at UNN, reducing processing time by 60%.</li>
+                <li>Delivered custom software solutions for education and business sectors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Projects */}
+        <div className="mt-10 max-w-4xl text-left">
+          <h2 className="text-2xl font-bold mb-4 text-center">Key Projects</h2>
+          <div className="space-y-6">
+            <div className="bg-white/10 p-6 rounded-lg border border-white/20">
+              <h3 className="text-xl font-semibold">Academic Staff Scoring System</h3>
+              <p className="text-sm text-gray-300">Technologies: Python, Django, PostgreSQL</p>
+              <p className="text-sm mt-2">
+                <a href="https://github.com/KodeVoid/asr-academic-scoring-system" target="_blank" rel="noopener noreferrer" className="underline">GitHub</a>
+              </p>
+              <ul className="list-disc ml-6 mt-2 text-sm">
+                <li>Partially automated university staff evaluation processes.</li>
+                <li>Implemented secure data handling and reporting features.</li>
+                <li>Streamlined administrative workflows for academic departments.</li>
+              </ul>
+            </div>
+            <div className="bg-white/10 p-6 rounded-lg border border-white/20">
+              <h3 className="text-xl font-semibold">Library Management System</h3>
+              <p className="text-sm text-gray-300">Technologies: Django, PostgreSQL, JavaScript</p>
+              <ul className="list-disc ml-6 mt-2 text-sm">
+                <li>Built a comprehensive book cataloging and borrower management system.</li>
+                <li>Implemented real-time inventory tracking and automated fine calculations.</li>
+                <li>Designed a responsive user interface with modern UX principles.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Tech Stack / Skills */}
         <div className="mt-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold mb-4">Core Tech Stack</h2>
+          <h2 className="text-2xl font-bold mb-4">Technical Skills</h2>
           <div className="flex flex-wrap justify-center gap-4 text-white/90 font-semibold">
             {[
+              "Python",
+              "Rust",
+              "JavaScript",
+              "HTML5",
               "Django",
-              "Tailwind CSS",
               "React",
-              
-              "Git & GitHub",
+              "TailwindCSS",
+              "sqlx",
+              "actix_web",
+              "PostgreSQL",
+              "Git",
+              "Network Configuration",
+              "System Administration",
             ].map((tech) => (
               <span
                 key={tech}
@@ -34,6 +97,20 @@ const About = () => {
                 {tech}
               </span>
             ))}
+          </div>
+        </div>
+
+        {/* Education & Certifications */}
+        <div className="mt-10 max-w-4xl text-left">
+          <h2 className="text-2xl font-bold mb-4 text-center">Education & Certifications</h2>
+          <div className="bg-white/10 p-6 rounded-lg border border-white/20">
+            <h3 className="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
+            <p className="text-sm text-gray-300">University of Nigeria, Nsukka | 2024</p>
+          </div>
+          <div className="bg-white/10 p-6 rounded-lg border border-white/20 mt-4">
+            <h3 className="text-xl font-semibold">Fundamentals of Deep Learning</h3>
+            <p className="text-sm text-gray-300">Nvidia Deep Learning Institute</p>
+            <p className="text-sm mt-2">Gained expertise in machine learning workflows, including data cleaning, feature engineering, and model training.</p>
           </div>
         </div>
 
@@ -87,7 +164,7 @@ const About = () => {
 
         {/* Footer */}
         <div className="mt-10 text-sm text-gray-400 text-center">
-          <p>© 2023 Kendrick Olori. All rights reserved.</p>
+          <p>© 2025 Kendrick Olori. All rights reserved.</p>
         </div>
       </div>
     </>
