@@ -6,7 +6,7 @@ const Navbar = ({menuOpen,setMenuOpen}) => {
     },[menuOpen])
 
   return (
-    <nav className="fixed top-0 w-full  
+    <nav className="fixed top-0 w-full  z-40
         bg-gradient-to-r from-purple-800 to-purple-600/20
         backdrop-blur-lg border-b border-white/20 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
