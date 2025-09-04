@@ -13,20 +13,22 @@ export const Home = () => {
           scalable applications. My goal is to build solutions that deliver peak
           performance, efficiency, and a delightful user experience.
         </p>
-        <div className="flex justify-center space-x-4">
-          <a
-            href="#projects"
-            className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded font-medium transition"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium hover:bg-blue-500 hover:text-white transition"
-          >
-            Contact Me
-          </a>
-        </div>
+       <div className="flex justify-center space-x-4">
+  <a
+    href="#projects"
+    className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded font-medium transition transform hover:-translate-y-2 hover:shadow-lg"
+  >
+    View Projects
+  </a>
+
+  <a
+    href="#contact"
+    className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition transform hover:scale-105 hover:bg-blue-500 hover:text-white"
+  >
+    Contact Me
+  </a>
+</div>
+
       </div>
     </section>
   );
