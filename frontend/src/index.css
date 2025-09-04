@@ -20,7 +20,7 @@ opacity: 1;
     }
   }
   .animate-blink{
-    animation: blink ease 0.8s infinite;
+    animation: blinkease 0.8s infinite;
   }
   @keyframes loading {
     
