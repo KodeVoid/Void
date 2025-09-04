@@ -1,20 +1,12 @@
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# **Void - Personal Digital OS**
+Currently, two official plugins are available:
 
-Void is a minimalist, immersive personal digital operating system that combines CyberBrutalist design with a terminal UI. It integrates digital garden features, client portals, and a unified world/OS UI to create a dynamic, efficient environment for users.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## **Features**
-- **Terminal UI**: A text-based interface for power users.
-- **Interactive World/OS UI**: Seamless integration of CyberBrutalism and glassmorphism for professional use.
-- **Client Portal**: Manage personal or business data and interactions.
-- **Digital Garden**: Organize notes and projects in an intuitive layout.
+## Expanding the ESLint configuration
 
-
-
-## **Message Scheduling Utility**
-Void includes a message scheduling tool, allowing users to schedule messages for specific events, days, or occasions.
-
-## Whatsap messaging utility
-
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
