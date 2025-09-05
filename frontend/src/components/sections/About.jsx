@@ -1,9 +1,10 @@
+import RevealOnScroll from "../RevealOnScroll";
 export const About = () => {
   const frontendSkills = ["React", "TailwindCSS", "JavaScript", "HTML5"];
   const backendSkills = ["Python", "Rust", "Django", "PostgreSQL", "sqlx", "actix_web"];
 
   return (
-    <section
+   <RevealOnScroll> <section
       id="about"
       className="min-h-screen flex items-center justify-center py-20"
     >
@@ -104,6 +105,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section></RevealOnScroll>
   );
 };
