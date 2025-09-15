@@ -68,6 +68,21 @@ export const Projects = () => {
         "Mobile-responsive layout",
       ],
     },
+    {
+      title: "URL Shortener API",
+      description:
+        "A comprehensive URL shortening service built with Python Flask. Provides RESTful endpoints for creating, retrieving, and redirecting short URLs, with built-in analytics for click tracking.",
+      technologies: ["Python", "Flask", "PostgreSQL", "REST API"],
+      githubUrl: "https://github.com/KodeVoid/CodeAlpha_url_shortener",
+      liveUrl: "https://codealpha-url-shortener.onrender.com",
+      docsUrl: "https://codealpha-url-shortener.onrender.com/api-docs",
+      highlights: [
+        "RESTful API design",
+        "Custom short codes",
+        "Click analytics tracking",
+        "Deployed on Render",
+      ],
+    },
   ];
 
   return (
@@ -100,6 +115,7 @@ export const Projects = () => {
                         aria-label="GitHub Repository"
                         className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
                       >
+                        {/* GitHub Icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -122,6 +138,7 @@ export const Projects = () => {
                         aria-label="Live Demo"
                         className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
                       >
+                        {/* External Link Icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -135,6 +152,30 @@ export const Projects = () => {
                           <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                           <polyline points="15 3 21 3 21 9" />
                           <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </a>
+                    )}
+                    {project.docsUrl && (
+                      <a
+                        href={project.docsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="API Docs"
+                        className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                      >
+                        {/* Book/Docs Icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="w-4 h-4 text-gray-400 hover:text-white"
+                        >
+                          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                          <path d="M20 22H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20z" />
                         </svg>
                       </a>
                     )}
